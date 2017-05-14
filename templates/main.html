@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	{% load static %}
+    <title>Hoolders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+</head>
+<body>
+	<header class="page-header">
+		<div class="row" >
+			<div class="col-sm-4"><h1 class="text-center"><img src="{% static "img1.png" %}"  alt="Hoolders" width="175" height="100"></h1></div>
+			<div class="col-sm-8">
+				<h2 class="text-center"> 
+					<ul class="breadcrumb" >
+			   			<li><a href="#">Investir </a></li>
+			    		<li><a href="#">Se finance </a></li>
+			   		 	<li><a href="#">{{username}}</a></li>        
+					</ul>
+				</h2>
+			</div>
+		</div>
+	</header>
+{% block profil %}
+{% endblock %}
+
+{% block login %}
+{% endblock %}
+	<script src="{% static "editMail.js" %}" charset="utf-8"></script> 
+</body>
+</html>

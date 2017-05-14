@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+{% block profil %}
+<div id="border">
+	{% if username %}
+		<h1> <p class="text-center"> <span style=" color: red"> Tableu de bord</span> {{User.nom}} {{User.prenom}} <a href="/auth/logout">Deconnection</a></p></h1>
+		<h4 style="padding-left: 200px"> Découvrir les entreprises en financement <button style="background-color: orange"><span class="glyphicon glyphicon-envelope"></span> Voir la liste</button></h4>
+		<hr>
+		<div class="row">
+  			<div class=" col-xs-4 col-sm-4 col-md-3 col-lg-3">
+  				<ul class="nav nav-stacked affix ">
+				    <li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-envelope" style="float: left"></span>Messages</a></li>
+				    <li><a href="#" class = "lbutton text-right" ><span class="glyphicon glyphicon-user" style="float: left"></span>Mon Profil</a> </li>
+				 	<li><a href="#" class = "lbutton text-right" ><span class="glyphicon glyphicon-briefcase" style="float: left"></span>Les entreprises en financement</a> </li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-briefcase" style="float: left"></span>Mon projet</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-ok-circle" style="float: left"></span>Projet à valider</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-ok-circle" style="float: left"></span>Documrnts des projets</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-ok-circle" style="float: left"></span>Contrats à signer</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-ok-circle" style="float: left"></span>Gestion des investisseurs</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-ok-circle" style="float: left"></span>Gestion des investissement</a></li>
+					<li><a href="#" class = "lbutton text-right">Mes investissement</a></li>
+					<li><a href="#" class = "lbutton text-right"><span class="glyphicon glyphicon-zoom-in" style="float: left"></span>Les suivis</a></li>
+					<li><a href="#" class = "lbutton text-right">Mon carnet d'adresse</a></li> 
+				</ul>
+  			</div>
+  			<div class="col-xs-4 col-sm-4  col-md-3 col-lg-3">
+  				{%load static%}
+  				<div><p><img src="{% static User.imageName %}" class="img-rounded"></p></div>
+  				<p><button id="Mybtn">Modifier ses information</button></p>
+  				<p><button id="Mybtn">Changez de mot de passe</button></p>
+  				<p><button id="Mybtn">Modifier son profil investisseur</button></p>
+  			</div>
+  		
+  			<div class="col-xs-4 col-sm-4  col-md-6 col-lg-6">
+  				<div class="panel panel-info">
+     			 <div class="panel-heading"><h4 class="text-center">Mes informations</h4></div>
+     			 	<div class="panel-body">
+     			 	<div><strong>Nom d'utilisateur: </strong>{{User.username}}</div>
+					<div><strong>Prénom:</strong> {{User.prenom}}</div>
+					<div><strong>Nom:</strong> {{User.nom}}</div>
+					<div><strong>Adresse email: </strong>{{User.email}}</div>
+					<div><strong>Date de naissance:</strong> {{User.birthDate}}</div>
+					<div><strong>Numéro de téléphone fixe:</strong> {{User.telephone}}</div>
+					<div><strong>Numéro de téléphone mobile:</strong> {{User.telephonePortable}}</div>
+					<div><strong>Adresse:</strong> {{User.adresse}}</div>
+					<div><strong>Ville:</strong> {{User.ville}}</div>
+					<div><strong>Code Postal:</strong> {{User.codePostal}}</div>
+					<div><strong>Site internet:</strong> {{User.site}}</div>
+					<div><strong>Votre description:</strong> {{User.description}}</div>
+					<div><strong>Lien linkedin:</strong> {{User.linkedIn}}</div>
+					<div><strong>Lien facebook:</strong> {{User.facebook}}</div>
+					<div><strong>Lien twitter:</strong> {{User.twitter}}</div>
+					<div><strong>Centre d'intérêt:</strong> {{User.Interet}}</div>
+     				</div>
+    			</div>
+				
+	  		</div>
+		
+		</div>
+
+
+
+
+	{% else %}
+		<h1><p class="text-center">Pour regarder votre profil vous devez <a href="/auth/login">Login</a></p></h1>
+	{% endif %}
+
+</div>
+
+
+
+{% endblock %}

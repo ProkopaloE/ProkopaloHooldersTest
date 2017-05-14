@@ -1,0 +1,21 @@
+
+
+#divcenter{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+#border{
+	padding-left: 100px !important;
+	padding-right: 100px !important;
+}
+
+.lbutton:link ,.lbutton:hover{ 
+background-color: orange !important;} 
+
+ .lbutton:focus{ 
+background-color:yellow !important;}
